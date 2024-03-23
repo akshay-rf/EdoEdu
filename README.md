@@ -1,7 +1,5 @@
 # 🎓 EdoEdu 🌟
 
-![EdoEdu Logo](https://your-website.com/path/to/logo.png)
-
 ## About EdoEdu
 
 Welcome to EdoEdu, where learning knows no bounds! EdoEdu is not just an online learning platform; it's a vibrant community dedicated to helping you achieve your educational goals, explore new interests, and unleash your full potential. With a wide range of courses, innovative features, and a supportive community, EdoEdu is here to inspire, empower, and transform your learning experience.
