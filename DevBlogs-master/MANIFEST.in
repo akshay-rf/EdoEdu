@@ -1,0 +1,6 @@
+include flaskb_app/schema.sql
+graft flaskb_app/static
+graft flaskb_app/templates
+global-exclude *.pyc
+
+

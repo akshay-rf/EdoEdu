@@ -1,0 +1,111 @@
+/* form.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #baa2a2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 13ch;
+    color: #c83763;
+    text-transform: uppercase;
+}
+
+img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #c83763;
+    padding-left: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 4.9);
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Position the form relative */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 20px;
+}
+
+textarea {
+    width: calc(100% - 50px);
+    height: 450px; /* Adjust textarea width to accommodate buttons */
+    padding: 50px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+input[type="submit"] {
+    position: absolute; /* Position the translate button absolutely */
+    right: calc(50% + 15px); /* Align translate button to the right */
+    bottom: -30px; /* Adjust the distance from the bottom */
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+select#language {
+    position: absolute; /* Position the language change button absolutely */
+    left: calc(50% + 15px); /* Align language change button to the left */
+    bottom: -30px; /* Adjust the distance from the bottom */
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+select#language:hover {
+    background-color: #297fb8;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

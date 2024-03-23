@@ -1,0 +1,73 @@
+{% extends 'blog_base.html' %}
+
+{% block title %}
+    DevBlogs | Home
+{% endblock %}
+
+{% block custom_import %}
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+{% endblock %}
+
+{% block navbar_links %}
+<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <a href="{{url_for('views.home')}}" class="navbar-brand ml-2 pb-4 pt-3">
+        <img src="{{ url_for('static', filename='icons/dev.png') }}" alt="Logo" width="50">
+        EdoEdu
+    </a>
+    <a class="nav-link active" id="v-pills-home-tab"  href="#" aria-controls="v-pills-home" aria-selected="true">Home</a>
+    <a class="nav-link" id="v-pills-messages-tab" href="#"  aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+    <a class="nav-link" id="v-pills-messages-tab" href="#" aria-controls="v-pills-community" aria-selected="false">Community</a>
+    <a class="nav-link" id="v-pills-messages-tab" href="{{ url_for('views.edomeet') }}" aria-controls="v-pills-edomeet" aria-selected="false">EdoMeet</a>
+    <a class="nav-link" id="v-pills-profile-tab" href="#" aria-controls="v-pills-profile" aria-selected="false">{{ g.user['username'] }}</a>
+    <a class="nav-link" id="v-pills-settings-tab" href="{{ url_for('auth.logout') }}" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
+</div>
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid landing">
+    <div class="row p-3">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <a class="btn btn-secondary" href="{{ url_for('views.headlines') }}">Headlines</a>
+            <a class="btn btn-secondary" href="{{ url_for('views.articles') }}" >Articles</a>
+            <a class="btn btn-secondary" href="{{ url_for('views.sources') }}">Sources</a>
+          
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Categories
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ url_for('views.business') }}">Businees</a>
+                <a class="dropdown-item" href="{{ url_for('views.entertainment') }}">Entertainment</a>
+                <a class="dropdown-item" href="{{ url_for('views.tech') }}">Technology</a>
+                <a class="dropdown-item" href="{{ url_for('views.health') }}">Health</a>
+                <a class="dropdown-item" href="{{ url_for('views.science') }}">Science</a>
+                <a class="dropdown-item" href="{{ url_for('views.sports') }}">Sports</a>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="row">
+        {% for source, title, desc, author, img, p_date, url in headlines %}
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card mb-3">
+                <img src="{{ img }}" class="card-img image-fluid" alt="...">
+                <div class="card-body">
+                    <p class="card-text source">{{ source.name }}</p>
+                    <a href="{{ url }}">
+                        <h5 class="card-title"><b> {{ title }} </b></h5>
+                    </a>
+                    <p class="card-text">{{ desc }}</p>
+                    <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #566379;transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg> Author: {{ author }}</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text published"><svg class="p-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #566379;transform: ;msFilter:;"><path d="M12 5c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zm0 14c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path><path d="M11 9h2v5h-2zM9 2h6v2H9zm10.293 5.707-2-2 1.414-1.414 2 2z"></path></svg> Date Published: {{ p_date }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
