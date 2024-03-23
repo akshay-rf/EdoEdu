@@ -35,7 +35,7 @@ Get instant support and guidance with EdoChat, our intelligent educational chatb
 Break down language barriers and access course content in your preferred language with Anuvandini, our advanced regional language translator. Explore courses, connect with peers, and expand your horizons without limitations, regardless of language differences.
 
 ## Video Demo
-
+[![DEMO](https://img.youtube.com/vi/xBO9_OQ_z1c/0.jpg)](https://www.youtube.com/watch?v=xBO9_OQ_z1c)
 
 ## Join EdoEdu Today and Ignite Your Learning Journey!
 
