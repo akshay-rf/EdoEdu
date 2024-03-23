@@ -1,3 +1,4 @@
+
 # 🎓 EdoEdu 🌟
 
 ## About EdoEdu
@@ -7,14 +8,17 @@ Welcome to EdoEdu, where learning knows no bounds! EdoEdu is not just an online 
 ## Features
 
 ### 🆓 Free and 💰 Paid Courses
+![enter image description here](https://i.ibb.co/6Y7H3J3/1.png)
 
 Explore our extensive library of courses covering diverse topics, ranging from technology and business to arts and personal development. Dive into our free courses or unlock premium content with our flexible paid subscriptions, tailored to fit your learning needs and budget.
 
 ### 🔒 Secure Payment Portals
+![enter image description here](https://i.ibb.co/9hjjxWR/2.png)
 
 Rest assured, your transactions are safe and secure with our up-to-date payment portals. Enjoy hassle-free enrollment in your favorite courses without worrying about the security of your financial information.
 
 ### 📈 Course Progress Tracking and 🎉 Engaging Quizzes
+![enter image description here](https://i.ibb.co/f2VFC7B/3.png)
 
 Track your learning journey effortlessly with our intuitive course progress tracking system. Stay motivated and test your knowledge with interactive quizzes and assessments designed to reinforce key concepts and keep you engaged.
 
