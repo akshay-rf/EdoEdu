@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/form.css') }}">
+
+    <title>Translator</title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='language.png') }}" alt="Language Image">
+    <h1>AI 
+        <br>
+    </h1>
+    <h2>Language Translator</h2>
+    <form method="post">
+        <label for="summary">What you want to translate?</label><br>
+        <textarea id="summary" name="summary" rows="4" cols="50" required></textarea><br>
+
+        <label for="language">Select a language:</label><br>
+        <select id="language" name="language">
+            <option value="hin_Deva">Hindi</option>
+            <option value="tel_Telu">Telugu</option>
+            <option value="tam_Taml">Tamil</option>
+            <option value="fra_Latn">French</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <input type="submit" value="Translate">
+    </form>
+</body>
+</html>

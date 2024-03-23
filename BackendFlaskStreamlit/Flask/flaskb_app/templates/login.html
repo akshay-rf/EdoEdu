@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+DevBlogs | Login
+{% endblock %}
+
+{% block custom_import %}
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block navbar_links %}
+<nav class="navbar navbar-expand-lg dark">
+    <a href="{{url_for('index')}}" class="navbar-brand ml-5">
+        <img src="{{ url_for('static', filename='icons/dev.png') }}" alt="Logo" width="50">
+        EdoEdu
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarcontrols"
+            aria-label="Toggle navigation" aria-controls="navbarcontrols" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+<div id="navbarcontrols" class="collapse navbar-collapse">
+<ul class="navbar-nav ml-auto">
+    {% if g.user %}
+    <li class="nav-item"><span>{{ g.user['username'] }}</span></li>
+    <li class="nav-item"><a href="{{ url_for('auth.logout') }}" class="nav-link">Logout</a></li>
+    {% else %}
+    <li class="nav-item mr-5"><a href="{{ url_for('auth.login') }}" class="nav-link">Login</a></li>
+    <li class="nav-item mr-5"><a href="{{ url_for('auth.register') }}" class="nav-link">Register</a></li>
+    {% endif %}
+</ul>
+</div>
+</nav>
+{% endblock %}
+
+{% block body %}
+
+<div class="row m-auto align-items-center" style="height: 80%">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        {% include 'usp_benefits.html' %}
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="container">
+            {% include 'flash_msgs.html' %}
+            {% block content %}
+                <div class="jumbotron m-auto" style="max-width:500px;">
+                    <form action="{{ url_for('auth.login') }}" method="post" class="form">
+                        <div class="form-group">
+                            <label for="username">Username / Email</label>
+                            <input class="form-control" type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary">Login</button>
+                    </form>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+html, body {
+    height: 100%;
+}
+
+.pencil-sketch {
+    font-family: 'handdodle-pencil-font';
+}
+
+@font-face {
+    font-family: 'handdodle-pencil-font';
+    src: url("/static/fonts/Handodle-rg38A.ttf");
+}

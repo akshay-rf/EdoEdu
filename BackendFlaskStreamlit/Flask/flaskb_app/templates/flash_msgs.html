@@ -1,0 +1,21 @@
+<section class="content m-auto" style='max-width: 500px;'>
+    {% for type, msg in get_flashed_messages(with_categories=True) %}
+        {% if type=='error' %}
+            <div class="alert alert-danger" role='alert'>
+                {{ msg }}
+            </div>
+        {% elif type=='success' %}
+            <div class="alert alert-success" role='alert'>
+                {{ msg }}
+            </div>
+        {% elif type=='warning' %}
+            <div class="alert alert-warning" role='alert'>
+                {{ msg }}
+            </div>
+        {% elif type=='info' %}
+            <div class="alert alert-info" role='alert'>
+                {{ msg }}
+            </div>
+        {% endif %}
+    {% endfor %}
+</section>
