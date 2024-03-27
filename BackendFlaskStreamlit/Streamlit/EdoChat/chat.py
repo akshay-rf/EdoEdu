@@ -16,8 +16,8 @@ from IPython.display import display
 from IPython.display import Markdown
 
 
-os.getenv("AIzaSyDlkm2O5f7aujVl__OZEf3j50lP0HK4vnE")
-genai.configure("AIzaSyDlkm2O5f7aujVl__OZEf3j50lP0HK4vnE")
+os.getenv("api_key")
+genai.configure("gemini-pro-api-key")
 
 ## Function to load OpenAI model and get respones
 model = genai.GenerativeModel('gemini-pro')
